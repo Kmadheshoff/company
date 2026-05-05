@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./assets/logo.png";
+import founder from "./assets/founder.jpg";
 import { useState } from "react";
 import {
   FaFacebookF,
@@ -143,11 +144,45 @@ export default function App() {
         <div>
           <span className="tag">About Company</span>
           <h2>Who We Are</h2>
-          <p>
-            Nexgent Solutions is a results-driven digital agency focused on building
-            powerful websites and marketing systems.
-          </p>
+ <p>
+Nexgent Solutions is a modern digital agency focused on helping businesses grow through powerful websites, smart marketing, and conversion-driven strategies. 
+
+We don’t just build websites — we create systems that generate leads, increase sales, and build strong brand presence. Our approach combines clean design, performance optimization, and data-driven marketing to deliver real results.
+
+From startups to growing businesses, we help our clients scale faster with reliable and creative digital solutions.
+</p>
         </div>
+
+        {/* FOUNDER */}
+<section className="section">
+  <div className="title">
+    <span className="tag">Founder</span>
+    <h2>Meet The Founder</h2>
+  </div>
+
+  <div className="founder-box">
+    <div className="founder-img">
+      <img src={founder} alt="Founder" />
+    </div>
+
+    <div className="founder-content">
+      <h3>Madhesh</h3>
+      <span>Founder & Developer</span>
+ 
+      <p>
+        I’m a passionate developer and digital creator focused on building
+        modern web solutions that help businesses grow. With experience in
+        web development, automation, and digital systems, I created Nexgent
+        Solutions to deliver high-quality, performance-driven websites.
+      </p>
+<br></br>
+      <p>
+        My goal is simple — build clean, fast, and result-focused products
+        that actually make an impact for clients.
+      </p>
+    </div>
+  </div>
+</section>
 
         <div className="company-box">
           <div><FaCheckCircle /> 20+ Projects Completed</div>
@@ -259,7 +294,7 @@ export default function App() {
         <div className="contact-wrapper">
           <div className="contact-info">
             <span className="tag">Contact Us</span>
-            <h2>Let’s Build Your Next Big Idea 🚀</h2>
+            <h2>Let’s Build Your Next Big Idea</h2>
 
             <p className="contact-desc">
               Get in touch and let's grow your business.
@@ -272,10 +307,10 @@ export default function App() {
             </div>
 
             <div className="contact-buttons">
-              <a href="https://wa.me/9190802820280" className="btn whatsapp">
+              <a href="https://wa.me/919080282080" className="btn whatsapp">
                 <FaWhatsapp /> WhatsApp
               </a>
-              <a href="tel:+919876543210" className="btn call">
+              <a href="tel:+919080282080" className="btn call">
                 <FaPhoneAlt /> Call Now
               </a>
             </div>
@@ -285,7 +320,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <h3>Nexgent Solutions</h3>
+        <img src={logo}></img>
            <p>
         Helping businesses grow with high-performance websites and
         modern digital strategies.
@@ -293,16 +328,18 @@ export default function App() {
 
         <div className="footer-links">
           <a onClick={() => scrollToSection("home")}>Home</a>
+          <a onClick={() => scrollToSection("company")}>Company</a>
           <a onClick={() => scrollToSection("services")}>Services</a>
           <a onClick={() => scrollToSection("portfolio")}>Portfolio</a>
+          <a onClick={() => scrollToSection("faq")}>FAQ</a>
           <a onClick={() => scrollToSection("contact")}>Contact</a>
         </div>
 
         <div className="social">
-          <FaFacebookF />
-          <FaInstagram />
-          <FaLinkedinIn />
-          <FaWhatsapp />
+        <a><FaFacebookF /></a>  
+         <a><FaInstagram /></a> 
+        <a><FaLinkedinIn /></a>  
+          <a><FaWhatsapp /></a>
         </div>
          <div className="footer-bottom">
     <p>© 2026 Nexgent Solutions. All rights reserved.</p>
