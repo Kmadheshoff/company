@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./assets/logo.png";
-import founder from "./assets/founder.jpg";
+import wall from "./assets/wall.png"
+import founder from "./assets/founder.png";
 import { useState } from "react";
 import {
   FaFacebookF,
@@ -133,8 +134,7 @@ export default function App() {
 
         <div className="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
-            alt="office"
+            src={wall}            alt="office"
           />
         </div>
       </section>
@@ -256,8 +256,7 @@ From startups to growing businesses, we help our clients scale faster with relia
         </div>
       </section>
 
-      {/* ✅ FAQ (NEW) */}
-    <section className="section faq" id="faq">
+     <section className="section faq" id="faq">
   <div className="title">
     <span className="tag">FAQ</span>
     <h2>Frequently Asked Questions</h2>
@@ -267,28 +266,98 @@ From startups to growing businesses, we help our clients scale faster with relia
 
     <details className="faq-item">
       <summary>
-        <span>How long does it take?</span>
+        <span>What is NexgentSolutions?</span>
       </summary>
-      <p>Most projects are completed within 1–3 weeks depending on complexity.</p>
+      <p>
+        NexgentSolutions is a modern web development brand focused on building fast, scalable, 
+        and high-performance websites. We combine clean design with powerful technology 
+        to help businesses grow online.
+      </p>
     </details>
 
     <details className="faq-item">
       <summary>
-        <span>Do you provide SEO?</span>
+        <span>Who is behind NexgentSolutions?</span>
       </summary>
-      <p>Yes, we include full SEO optimization including keywords, speed and ranking improvements.</p>
+      <p>
+        NexgentSolutions is built by a passionate developer focused on creating modern web solutions. 
+        Every project is handled with attention to detail, performance, and real-world usability.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>Why choose NexgentSolutions?</span>
+      </summary>
+      <p>
+        You get direct communication, faster delivery, and a fully customized website. 
+        Unlike generic services, we focus on performance, SEO, and unique design tailored to your brand.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>How long does it take to build a website?</span>
+      </summary>
+      <p>
+        Simple websites are usually completed within 1–2 weeks. 
+        More advanced platforms may take longer depending on features and complexity.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>How much does a website cost?</span>
+      </summary>
+      <p>
+        Pricing depends on your requirements. Each project is customized, 
+        and you’ll receive a clear, no-obligation quote with no hidden charges.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>What technologies do you use?</span>
+      </summary>
+      <p>
+        We build websites using modern technologies like <b>Next.js</b>, <b>React</b>, 
+        <b>JavaScript/TypeScript</b>, and <b>Tailwind CSS</b>. 
+        For backend and services, we use tools like <b>Supabase</b>, APIs, and cloud platforms.
+      </p>
     </details>
 
     <details className="faq-item">
       <summary>
         <span>Can I request custom features?</span>
       </summary>
-      <p>Absolutely. Every project is tailored to your business needs and goals.</p>
+      <p>
+        Yes. Every website is fully customizable based on your business needs — 
+        from UI design to advanced backend features.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>Are your websites SEO-friendly?</span>
+      </summary>
+      <p>
+        Yes. All websites include SEO basics like meta tags, structured data, 
+        fast performance, and mobile responsiveness to improve visibility on search engines.
+      </p>
+    </details>
+
+    <details className="faq-item">
+      <summary>
+        <span>Why not use Wix or page builders?</span>
+      </summary>
+      <p>
+        Page builders are easy but limited. Custom-built websites offer better speed, 
+        scalability, SEO, and a completely unique design tailored to your business.
+      </p>
     </details>
 
   </div>
 </section>
-
       {/* CONTACT */}
       <section className="section contact" id="contact">
         <div className="contact-wrapper">
