@@ -9,6 +9,7 @@ import {
   FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaArrowRight,
   FaRocket, FaShieldAlt, FaClock, FaStar, FaLightbulb,
   FaHeart, FaTrophy, FaUsers, FaGem,
+  FaGithub,
 } from "react-icons/fa";
 
 /* ── Scroll Reveal Hook ── */
@@ -110,48 +111,81 @@ export default function App() {
   
 
   const pricingPlans = [
-    {
-      title: "Static Website",
-      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-      desc: "Perfect for portfolios, landing pages, and small businesses. Fast and secure.",
-      features: ["5 Pages", "Responsive Design", "Contact Form", "Social Media Integration"],
-      original: "6,000",
-      price: "3,000",
-      discount: "50% OFF",
-    },
-    {
-      title: "Dynamic Website",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      desc: "Content Management System (CMS) to easily update your content without code.",
-      features: ["Admin Panel", "Blog Functionality", "User Authentication", "Database Integration"],
-      original: "16,000",
-      price: "8,000",
-      discount: "50% OFF",
-      popular: true,
-    },
-    {
-      title: "E-commerce Website",
-      img: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&q=80",
-      desc: "Full-featured online store to sell your products globally.",
-      features: ["Product Management", "Payment Gateway", "Cart & Checkout", "Order Tracking"],
-      original: "30,000",
-      price: "15,000",
-      discount: "50% OFF",
-    },
-  ];
+  {
+    title: "Landing Website",
+    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    desc: "Perfect for startups, personal brands, and businesses looking for a modern online presence.",
+    features: [
+      "Modern UI Design",
+      "Mobile Responsive",
+      "Fast Loading Speed",
+      "Social Media Integration"
+    ],
+    original: "6,000",
+    price: "3,000",
+    discount: "50% OFF",
+  },
+  {
+    title: "Business Website",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    desc: "Professional website solution for growing businesses with advanced features and premium design.",
+    features: [
+      "Premium Design",
+      "Custom Pages",
+      "SEO Friendly",
+      "Performance Optimized"
+    ],
+    original: "16,000",
+    price: "8,000",
+    discount: "50% OFF",
+    popular: true,
+  },
+  {
+    title: "Digital Marketing",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    desc: "Boost your brand visibility and reach more customers with result-driven marketing solutions.",
+    features: [
+      "Social Media Promotion",
+      "Search Engine Optimization",
+      "Google Ads Management",
+      "Content Strategy"
+    ],
+    original: "20,000",
+    price: "10,000",
+    discount: "50% OFF",
+  },
+];
+const faqs = [
+  {
+    q: "What is Nexgent Solutions?",
+    a: "Nexgent Solutions is a modern web development brand focused on creating fast, responsive, and business-focused websites for startups, brands, and businesses."
+  },
 
-  const faqs = [
-    { q: "What is NexgentSolutions?", a: "NexgentSolutions is a modern web development brand focused on building fast, scalable, and high-performance websites. We combine clean design with powerful technology to help businesses grow online." },
-    { q: "Who is behind NexgentSolutions?", a: "NexgentSolutions is built by a passionate developer focused on creating modern web solutions. Every project is handled with attention to detail, performance, and real-world usability." },
-    { q: "Why choose NexgentSolutions?", a: "You get direct communication, faster delivery, and a fully customized website. Unlike generic services, we focus on performance, SEO, and unique design tailored to your brand." },
-    { q: "How long does it take to build a website?", a: "Simple websites are usually completed within 1–2 weeks. More advanced platforms may take longer depending on features and complexity." },
-    { q: "How much does a website cost?", a: "Pricing depends on your requirements. Each project is customized, and you'll receive a clear, no-obligation quote with no hidden charges." },
-    { q: "What technologies do you use?", a: "We build with Next.js, React, TypeScript, and Tailwind CSS. For backend and services we use Supabase, APIs, and modern cloud platforms." },
-    { q: "Can I request custom features?", a: "Yes. Every website is fully customizable based on your business needs — from UI design to advanced backend features." },
-    { q: "Are your websites SEO-friendly?", a: "Yes. All websites include SEO basics like meta tags, structured data, fast performance, and mobile responsiveness to improve visibility on search engines." },
-    { q: "Why not use Wix or page builders?", a: "Page builders are easy but limited. Custom-built websites offer better speed, scalability, SEO, and a completely unique design tailored to your business." },
-  ];
+  {
+    q: "Why choose Nexgent Solutions?",
+    a: "We focus on clean design, fast performance, modern technology, and direct communication to deliver websites that help businesses grow online."
+  },
 
+  {
+    q: "What services do you provide?",
+    a: "We provide landing websites, business websites, portfolio websites, UI design, SEO optimization, and digital marketing solutions."
+  },
+
+  {
+    q: "How long does it take to complete a website?",
+    a: "Most websites are completed within 5–10 days depending on the project size, features, and custom requirements."
+  },
+
+  {
+    q: "Are your websites mobile-friendly?",
+    a: "Yes. Every website is fully responsive and optimized for mobile, tablet, and desktop devices for the best user experience."
+  },
+
+  {
+    q: "Can I request a custom website design?",
+    a: "Absolutely. Every project is designed based on your brand identity, business goals, and feature requirements."
+  },
+];
   return (
     <div className="app">
 
@@ -237,12 +271,12 @@ export default function App() {
             <button className="btn-primary" onClick={() => scrollToSection("portfolio")}>
               Start a Project
             </button>
-            <button className="btn-secondary" onClick={() => scrollToSection("contact")}>
+            <button className="btn-secondary" onClick={() => window.open("https://forms.gle/tc62VLQWZFgbx3J47")}>
               Book a Call
             </button>
           </div>
           <div className="hero-stats">
-            <div className="hero-stat"><strong>20+</strong><span>Projects Done</span></div>
+            <div className="hero-stat"><strong>1+</strong><span>Projects Done</span></div>
             <div className="hero-stat"><strong>99%</strong><span>Satisfaction</span></div>
             <div className="hero-stat"><strong>2–4wk</strong><span>Avg Delivery</span></div>
           </div>
@@ -285,7 +319,7 @@ export default function App() {
 
             <div className="company-pillars stagger-children" style={{ marginTop:"32px" }}>
               {[
-                { icon:<FaCheckCircle />, label:"20+ Projects Completed", sub:"Across industries worldwide" },
+                { icon:<FaCheckCircle />, label:"1+ Projects Completed", sub:"Across industries worldwide" },
                 { icon:<FaStar />, label:"99% Client Satisfaction", sub:"Results-driven approach" },
                 { icon:<FaGlobe />, label:"Global Support", sub:"Available across time zones" },
                 { icon:<FaShieldAlt />, label:"Quality Guaranteed", sub:"No compromise on delivery" },
@@ -315,15 +349,13 @@ export default function App() {
                 <h3>Madhesh</h3>
                 <span className="founder-role">Founder & Lead Developer</span>
                 <p>
-                  I'm a passionate developer and digital creator focused on building
-                  modern web solutions that help businesses grow. With experience in
-                  web development, automation, and digital systems, I created Nexgent
-                  Solutions to deliver high-quality, performance-driven websites.
+                  I'm Madhesh — the developer and creative mind behind Nexgent Solutions. No large agency setup, no unnecessary complexity, just focused work that delivers real results. I build modern websites and digital solutions with a strong focus on performance, clean design, and business growth.
+
+With experience in web development, automation, and digital systems, I handle every project with efficiency, creativity, and attention to detail. My approach is simple — create fast, impactful, and high-quality solutions without wasting time on things that don’t matter.
+
+Nexgent Solutions was built with one clear vision: helping businesses grow online through smart, modern, and result-driven digital experiences.
                 </p>
-                <p>
-                  My goal is simple — build clean, fast, and result-focused products
-                  that actually make an impact.
-                </p>
+              
               </div>
             </div>
           </div>
@@ -436,7 +468,7 @@ export default function App() {
                       ))}
                       <button
                         className="service-expand-cta"
-                        onClick={() => window.open("https://wa.me/919080282080")}
+                        onClick={() => window.open("https://wa.me/919080282080?text=Hi")}
                       >
                         <FaWhatsapp /> Get a Quote
                       </button>
@@ -491,7 +523,7 @@ export default function App() {
                 </div>
                 <button
                   className="pricing-cta"
-                  onClick={() => window.open("https://wa.me/919080282080")}
+                  onClick={() => window.open("https://wa.me/919080282080?text=Hi")}
                 >
                   CHOOSE PLAN
                 </button>
@@ -580,7 +612,7 @@ export default function App() {
 
             <div className="contact-items">
               {[
-                { icon:<FaEnvelope />, text:"hello@nexgent.com" },
+                { icon:<FaEnvelope />, text:"kmadheshoffical@gmail.com" },
                 { icon:<FaPhoneAlt />, text:"+91 9080282080" },
                 { icon:<FaMapMarkerAlt />, text:"Chennai, India" },
               ].map((item, i) => (
@@ -592,7 +624,7 @@ export default function App() {
             </div>
 
             <div className="contact-buttons">
-              <a href="https://wa.me/919080282080" className="btn-whatsapp">
+              <a href="https://wa.me/919080282080?text=Hi" className="btn-whatsapp">
                 <FaWhatsapp /> WhatsApp Us
               </a>
               <a href="tel:+919080282080" className="btn-call">
@@ -627,7 +659,7 @@ export default function App() {
               ))}
             </div>
             <button className="btn-primary" style={{ width:"100%", justifyContent:"center", display:"flex", gap:"10px" }}
-              onClick={() => window.open("https://wa.me/919080282080")}>
+              onClick={() => window.open("https://wa.me/919080282080?text=Hi")}>
               <FaWhatsapp /> Get Free Consultation
             </button>
           </div>
@@ -656,7 +688,8 @@ export default function App() {
               modern digital strategies that drive real results.
             </p>
             <div className="social" style={{ marginTop:"20px" }}>
-              {[<FaFacebookF />, <FaInstagram />, <FaLinkedinIn />, <FaWhatsapp />].map((icon, i) => (
+              {[ <FaInstagram onClick={()=> window.open("https://instagram.com/its__madhesh")}/>, <FaWhatsapp  onClick={() =>
+        window.open("https://wa.me/919080282080", "_blank")}/>].map((icon, i) => (
                 <a key={i}>{icon}</a>
               ))}
             </div>
