@@ -83,17 +83,7 @@ export default function App() {
         methods: "Data-driven decisions, conversion rate optimization",
       },
     },
-    {
-      icon: <FaGlobe />,
-      img: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&q=80",
-      title: "Branding & Landing Pages",
-      desc: "Creative branding systems and conversion-focused landing pages that make an impression.",
-      details: {
-        process: "Research → Wireframe → Visual Design → Copy → Launch",
-        techniques: "Figma, UX Design, Conversion Copywriting",
-        methods: "Story-driven design, psychology-backed CRO",
-      },
-    },
+    
   ];
 
   const portfolio = [
@@ -689,7 +679,7 @@ Nexgent Solutions was built with one clear vision: helping businesses grow onlin
             </p>
             <div className="social" style={{ marginTop:"20px" }}>
               {[ <FaInstagram onClick={()=> window.open("https://instagram.com/its__madhesh")}/>, <FaWhatsapp  onClick={() =>
-        window.open("https://wa.me/919080282080", "_blank")}/>].map((icon, i) => (
+        window.open("https://wa.me/919080282080", "_blank")}/>, <FaEnvelope onClick={() => window.location.href = "mailto:kmadheshoffical@gmail.com"} />,].map((icon, i) => (
                 <a key={i}>{icon}</a>
               ))}
             </div>
